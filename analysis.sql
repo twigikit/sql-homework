@@ -18,9 +18,3 @@ GROUP BY f.name
 ORDER BY transaction_count DESC
 ;
 
-SELECT *
-FROM transaction
-
-
-
-
