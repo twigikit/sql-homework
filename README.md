@@ -36,15 +36,19 @@ Cardholders with small transactions (less than $2.00) and also large transaction
 
 
 #### Part 2. Specific Card Holders
-**Card holder 2**
+**Cardholder ID 2 and 18** <br>
+The two plots below represents the time series of transactions over 2018 for cardholder IDs 2 and 18.
 
 ![](./Diagram/Plot_Cardholder_2.png)
 
-**Card holder 18**
 ![](./Diagram/Plot_Cardholder_18.png)
 
+![](./Diagram/Plot_Combined.png)
 
-**Card holder 25**
+Cardholder 2 consumption pattern looks fairly consistent throughout the year with all transactions always less than $20. No reasons to suspect any fraudulent transaction in cardholder 2 history. <br> 
+Cardholder 18 consumption pattern seems to spike up every one or two months. The transaction amount observed in the spikes are at least 10 times higher than median transaction size. These spikes are likely to be fraudulent transaction and warrant further investigation. 
+
+**Cardholder ID 25**
 The box plot below shows the expenditure data from January 2018 to June 2018 for cardholder ID 25.
 
 ![](./Diagram/Boxplot_Cardholder_25.png)
@@ -61,3 +65,4 @@ We have identified 8 outliers in the expenditure data (on average at least one o
 |6 | June | Hamilton-Mcfarland| Restaurant| $749.00|
 |7 | June | Cox, Montgomery and Morgan | Bar | $1,813.00|
 
+Most of the outlier transactions were more than $1,000. Half of these outliers were made between 6am and 7.30am.

@@ -18,8 +18,8 @@ Isolate (or group ) the transaction by each cardholder
 			WHEN (amount >= 2) 	THEN 0
 		 END AS twoless_ind,
 		 CASE
-		    WHEN(amount > 100) THEN 1
-			WHEN(amount <=100) THEN 0
+		    WHEN(amount > 500) THEN 1
+			WHEN(amount <=500) THEN 0
 		 END AS large_ind
  FROM 	transaction t1, 
  		credit_card t2, 
@@ -46,9 +46,21 @@ ORDER BY 	cardholder_id
 CREATE VIEW v_top_100_txn_am AS
 SELECT		*
 FROM		V_data_joined
-WHERE		txn_hour IN (7,8,9)
+WHERE		cardholder_id IN (1,3,6,7,9,12,16,18,24,25)
+AND			txn_hour IN (7,8,9)
 ORDER BY 	amount DESC
 LIMIT 100
+
+--top 5 merchants prone to being hacked
+SELECT  merchant_name,
+		merchant_category,
+		sum(twoless_ind),
+		sum(large_ind)
+FROM 	v_data_joined
+GROUP BY merchant_name, merchant_category
+HAVING sum(twoless_ind)> 4
+AND	sum(large_ind)>0
+
 
 
 
@@ -63,7 +75,8 @@ SELECT
 			ROUND(CAST(sum(amount) AS numeric),2) AS total_amount,
 			ROUND(CAST(avg(amount) AS numeric),2) AS average_amount,
 			sum(twoless_ind) AS num_txn_twoless,
-			count(cardholder_id) AS num_txn_all
+			sum(large_ind) AS num_txn_100more,
+			count(date) AS num_total_txn
 FROM 		v_data_joined
 GROUP BY	cardholder_id, txn_month, txn_day, txn_hour
 ORDER BY 	cardholder_id, txn_month, txn_day, txn_hour
