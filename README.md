@@ -7,7 +7,7 @@ The Data Analytics team has reviewed 25 credit card holders historical transacti
 *  Has there been any fraudulent transaction made?
 *  What are the top 5 merchants prone to being hacked using small transactions?
 
-CFO has also requested a more detailed analysis on specific card holders. This README presents the observations and conclusion of the review and analysis. 
+The CFO has also requested a more detailed analysis on specific card holders. This README presents the observations and conclusion of the review and analysis. 
 
 ### Data and Model
 To study the consumption pattern, we have relied on daily credit card transaction data for the period from 01 Jan 2018 to 31 December 2018. A database model was defined to store the credit card transaction data and a PostgreSQL database was created based on the model. The entity relationship diagram below sets out the defined database model.
@@ -33,7 +33,14 @@ Cardholders with small transactions (less than $2.00) and also large transaction
 
 
 #### Top 5 merchants prone to being hacked using small transactions
-
+The top 5 merchants who are prone to being hacked using small transactions and their corresponding category are: <br>
+| Merchant | Merchant Category |
+|----------|-------------------|
+|Wood-Ramirez| Pub |
+|Hood-Phillips| Bar|
+|Baker Inc| Food truck|
+|Jarvis-Turner| Pub|
+|Hamilton-Mcfarland| Restaurant|
 
 #### Part 2. Specific Card Holders
 **Cardholder ID 2 and 18** <br>
@@ -45,10 +52,10 @@ The two plots below represents the time series of transactions over 2018 for car
 
 ![](./Diagram/Plot_Combined.png)
 
-Cardholder 2 consumption pattern looks fairly consistent throughout the year with all transactions always less than $20. No reasons to suspect any fraudulent transaction in cardholder 2 history. <br> 
+Cardholder 2 consumption pattern looks fairly consistent throughout the year with all transactions always less than $20. There is no reason to suspect any fraudulent transaction in cardholder 2's history. <br> 
 Cardholder 18 consumption pattern seems to spike up every one or two months. The transaction amount observed in the spikes are at least 10 times higher than median transaction size. These spikes are likely to be fraudulent transaction and warrant further investigation. 
 
-**Cardholder ID 25**
+**Cardholder ID 25**<br>
 The box plot below shows the expenditure data from January 2018 to June 2018 for cardholder ID 25.
 
 ![](./Diagram/Boxplot_Cardholder_25.png)
