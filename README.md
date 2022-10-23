@@ -32,7 +32,13 @@ Some fraudsters hack a credit card by making several small transactions (general
 Cardholders with small transactions (less than $2.00) and also large transactions (greater than $500) are likely to have their credit card hacked. From the total 25 cardholders reviewed, we have identified 10 cardholders may have their credit cards hacked and warrant further investigation. They are cardholder 1, 3, 6, 7, 9, 12, 16, 18, 24 and 25.
 
 #### Is there a particular time period in which potentially fraudulent transactions are made?
-We hypothesised that fraudulent transactions are more likely to be made between 7am and 9am. We observed 279 transaction made between 7am and 9am, of which 30 were small transactions (less than $2.00), 9 transactions were $100 or greater and the rest were less than $20. Appendix 1 lists out the top 100 highest transactions made between 7am and 9am.
+We observed 279 transaction made between 7am and 9am, of which 30 were small transactions (less than $2), 9 transactions were $100 or greater and the rest were less than $20. Appendix 1 lists out the top 100 highest transactions made between 7am and 9am.
+
+The 9 transactions of amount $100 or greater were made by cardholders whom we suspected have their credit card hacked. These transactions could be fraudulent.
+
+**Rest of the day** <br>
+The number of fraudulent transactions observed between 7am to 9am is high but is not the highest. We have observed higher number of fraudulent transactions were made between 1am and 3am, and 1pm to 3pm. 
+
 
 #### Top 5 merchants prone to being hacked using small transactions
 The top 5 merchants who are prone to being hacked using small transactions and their corresponding category are: <br>
