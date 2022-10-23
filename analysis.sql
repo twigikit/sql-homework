@@ -16,7 +16,11 @@ Isolate (or group ) the transaction by each cardholder
 		CASE 
 		 	WHEN (amount < 2)  THEN 1 
 			WHEN (amount >= 2) 	THEN 0
-		 END AS twoless_ind
+		 END AS twoless_ind,
+		 CASE
+		    WHEN(amount > 100) THEN 1
+			WHEN(amount <=100) THEN 0
+		 END AS large_ind
  FROM 	transaction t1, 
  		credit_card t2, 
 		merchant t3, 
@@ -25,24 +29,9 @@ Isolate (or group ) the transaction by each cardholder
  AND 	t1.id_merchant = t3.id
  AND 	t3.id_merchant_category = t4.id
  ;
-
-/* review the transaction by cardholder */
-SELECT 		
-			cardholder_id,
-			EXTRACT(MONTH FROM date) AS txn_month,
-			EXTRACT(DAY FROM date) AS txn_day,
-			min(amount) AS min_amount,
-			ROUND(CAST(max(amount) AS numeric),2) AS max_amount,
-			ROUND(CAST(sum(amount) AS numeric),2) AS total_amount,
-			ROUND(CAST(avg(amount) AS numeric),2) AS average_amount,
-			sum(twoless_ind) AS num_txn_twoless,
-			count(cardholder_id) AS num_txn_all
-FROM 		data_all
-GROUP BY	cardholder_id, txn_month, txn_day
-ORDER BY 	cardholder_id, txn_month, txn_day
-;
-
---count the transactions that are less than $2.00 per cardholder
+ 
+ 
+ --count the transactions that are less than $2.00 per cardholder
 CREATE VIEW v_txn_twoless AS 
 SELECT 
 			cardholder_id,
@@ -52,6 +41,7 @@ GROUP BY	cardholder_id
 ORDER BY 	cardholder_id
 ;
 
+
 --top 100 highest transactions made between 7am and 9am
 CREATE VIEW v_top_100_txn_am AS
 SELECT		*
@@ -59,6 +49,26 @@ FROM		V_data_joined
 WHERE		txn_hour IN (7,8,9)
 ORDER BY 	amount DESC
 LIMIT 100
+
+
+
+/* review the transaction by cardholder */
+SELECT 		
+			cardholder_id,
+			txn_month, 
+			txn_day,
+			txn_hour,
+			ROUND(CAST(min(amount) AS numeric),2) AS min_amount,
+			ROUND(CAST(max(amount) AS numeric),2) AS max_amount,
+			ROUND(CAST(sum(amount) AS numeric),2) AS total_amount,
+			ROUND(CAST(avg(amount) AS numeric),2) AS average_amount,
+			sum(twoless_ind) AS num_txn_twoless,
+			count(cardholder_id) AS num_txn_all
+FROM 		v_data_joined
+GROUP BY	cardholder_id, txn_month, txn_day, txn_hour
+ORDER BY 	cardholder_id, txn_month, txn_day, txn_hour
+;
+
 
 
 
