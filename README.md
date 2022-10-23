@@ -1,7 +1,7 @@
 # Fraud Detection
 
 ### Context
-The Data Analytics team has reviewed 25 credit card holders historical transactions and consumption pattern in order to indentify possible fraudulent transactions. Specifically, the review seeks to answer the following questions:
+The Data Analytics team has reviewed 25 credit card holders historical transactions and consumption pattern in order to identify possible fraudulent transactions. Specifically, the review seeks to answer the following questions:
 *  Is there evidence to suggest that a credit card has been hacked?
 *  Is there a particular time period in which potentially fraudulent transactions are made?
 *  Has there been any fraudulent transaction made?
