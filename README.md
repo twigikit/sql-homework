@@ -29,7 +29,7 @@ Some fraudsters hack a credit card by making several small transactions (general
 
 ![](./Diagram/plot_maxtxn.jpeg)
 
-Cardholders with small transactions (less than $2.00) and also large transactions (greater than $500) are likely to have their credit card being hacked. From the total 25 cardholders reviewed, we have identified 10 cardholders may have their credit cards hacked and warrant further investigation. They are cardholder 1, 3, 6, 7, 9, 12, 16, 18, 24 and 25.
+Cardholders with small transactions (less than $2.00) and also large transactions (greater than $500) are likely to have their credit card hacked. From the total 25 cardholders reviewed, we have identified 10 cardholders may have their credit cards hacked and warrant further investigation. They are cardholder 1, 3, 6, 7, 9, 12, 16, 18, 24 and 25.
 
 #### Is there a particular time period in which potentially fraudulent transactions are made?
 
@@ -46,7 +46,7 @@ The top 5 merchants who are prone to being hacked using small transactions and t
 
 #### Part 2. Specific Card Holders
 **Cardholder ID 2 and 18** <br>
-The two plots below represents the time series of transactions over 2018 for cardholder IDs 2 and 18.
+The line plots below represent the time series of transactions over 2018 for cardholder IDs 2 and 18.
 
 ![](./Diagram/Plot_Cardholder_2.png)
 
