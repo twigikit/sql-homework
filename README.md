@@ -80,7 +80,7 @@ We have identified 8 outliers in the expenditure data (on average at least one o
 |7 | June | Hamilton-Mcfarland| Restaurant| $749.00|
 |8 | June | Cox, Montgomery and Morgan | Bar | $1,813.00|
 
-Most of the outlier transactions were more than $1,000. Half of these outliers were made between 6am and 7.30am.
+Majority of the outlier transactions were more than $1,000. Half of these outliers were made between 6am and 7.30am.
 
 ### Appendix 1
 * [Top 100 highest transactions made between 7am and 9am](./Extra/Output_top100_txn_7to9am.csv)
