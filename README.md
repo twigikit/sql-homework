@@ -1,13 +1,15 @@
 # Fraud Detection
 
 ### Context
-The Data Analytics team has reviewed 25 credit card holders historical transactions and consumptions pattern in order to indentify possible fraudulent transactions. Specifically, the review seeks to answer the following questions:
+The Data Analytics team has reviewed 25 credit card holders historical transactions and consumption pattern in order to indentify possible fraudulent transactions. Specifically, the review seeks to answer the following questions:
 *  Is there evidence to suggest that a credit card has been hacked?
 *  Is there a particular time period in which potentially fraudulent transactions are made?
 *  Has there been any fraudulent transaction made?
 *  What are the top 5 merchants prone to being hacked using small transactions?
 
-The CFO has also requested a more detailed analysis on specific card holders. This README presents the observations and conclusion of the review and analysis. 
+The CFO has also requested a more detailed analysis on specific card holders namely cardholder ID 2, 18 and 25. <br>
+
+This README presents the observations and conclusion of the review and analysis. 
 
 ### Data and Model
 To study the consumption pattern, we have relied on daily credit card transaction data for the period from 01 Jan 2018 to 31 December 2018. A database model was defined to store the credit card transaction data and a PostgreSQL database was created based on the model. The entity relationship diagram below sets out the defined database model.
@@ -16,14 +18,14 @@ To study the consumption pattern, we have relied on daily credit card transactio
 
 Once the database schema is created, data was imported from the corresponding csv files. 
 
-### Results and Obesrvations
+### Results and Observations
 #### Part 1. Potential Fraudelent Transactions
-#### Is there a credit card has been hacks?
+#### Is there a credit card has been hacked?
 Some fraudsters hack a credit card by making several small transactions (generally less than $2.00), which are typically ignored by most cardholders. The chart below shows the total number of transactions that are less than $2.00 per cardholder. <br>
 
 ![](./Diagram/plot_twoless.jpeg)
 
-It is unreasonable to expect no small transactions. Small transactions could be genuine. To narrow down the list of potential fraudulent transactions, we analyse the consumption pattern by analysing the daily maximum transaction amount by cardholders. 
+ Small transactions could be genuine. It is unreasonable to expect no small transactions at all. To narrow down the list of potential fraudulent transactions, we analyse the daily maximum transaction amount of each cardholders in order to establish an expected consumption pattern.
 
 ![](./Diagram/plot_maxtxn.jpeg)
 
