@@ -18,7 +18,7 @@ To study the consumption pattern, we have relied on daily credit card transactio
 
 Once the database schema is created, data was imported from the corresponding csv files. 
 
-### Results and Observations
+### Observations and Conclusion
 #### Part 1. Potential Fraudelent Transactions
 #### Is there a credit card has been hacked?
 Some fraudsters hack a credit card by making several small transactions (generally less than $2.00), which are typically ignored by most cardholders. The bar chart below shows the total number of transactions that are less than $2.00 per cardholder. <br>
