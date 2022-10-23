@@ -74,10 +74,11 @@ We have identified 8 outliers in the expenditure data (on average at least one o
 |1 | January| Cline, Myers and Strong| Restaurant| $1,177.00|
 |2 | March | Griffin-Woodard| Bar| $1,334.00|
 |3 | April | Bryant, Thomas and Collins| Pub| $1,063.00|
-|4 | May | Hamilton-Mcfarland| Restaurant| $269.00|
-|5 | June | Johnson-Fuller| Pub | $1,162.00|
-|6 | June | Hamilton-Mcfarland| Restaurant| $749.00|
-|7 | June | Cox, Montgomery and Morgan | Bar | $1,813.00|
+|4 | April | Hamilton-Mcfarland| Restaurant| $269.00|
+|5 | May  | Baker Inc| Food truck | $1,046.00|
+|6 | June | Johnson-Fuller| Pub | $1,162.00|
+|7 | June | Hamilton-Mcfarland| Restaurant| $749.00|
+|8 | June | Cox, Montgomery and Morgan | Bar | $1,813.00|
 
 Most of the outlier transactions were more than $1,000. Half of these outliers were made between 6am and 7.30am.
 
