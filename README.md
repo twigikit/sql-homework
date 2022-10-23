@@ -25,7 +25,7 @@ Some fraudsters hack a credit card by making several small transactions (general
 
 ![](./Diagram/plot_twoless.jpeg)
 
- Small transactions could be genuine. It is unreasonable to expect no small transactions. To increase the accuracy of our detection fraudulent transactions, we analyse the daily maximum transaction amount of each cardholders in order to establish an expected consumption pattern.
+ Small transactions could be genuine. It is unreasonable to expect no small transactions. To increase the accuracy of our detection, we analyse the daily maximum transaction amount of each cardholders in order to establish an expected consumption pattern.
 
 ![](./Diagram/plot_maxtxn.jpeg)
 
