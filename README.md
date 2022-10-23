@@ -37,7 +37,7 @@ We observed 279 transaction made between 7am and 9am, of which 30 were small tra
 The 9 transactions of amount $100 or greater were made by cardholders whom we suspected have their credit card hacked. These transactions could be fraudulent.
 
 **Rest of the day** <br>
-The number of fraudulent transactions observed between 7am to 9am is high but is not the highest. We have observed higher number of fraudulent transactions were made between 1am and 3am, and 1pm to 3pm. Hackers might have perceived that 1am-3am and 1pm-3pm window were our fraud detection system most vulnerable windows due to mandatory security updates or batch processing.
+The number of fraudulent transactions observed between 7am to 9am is high but is not the highest. We have observed higher number of fraudulent transactions were made between 1am and 3am, and 1pm to 3pm. Hackers might have perceived that 1am-3am and 1pm-3pm window were when our fraud detection system most vulnerable due to mandatory security updates or batch processing.
 
 #### Top 5 merchants prone to being hacked using small transactions
 The top 5 merchants who are prone to being hacked using small transactions and their corresponding category are: <br>
