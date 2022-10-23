@@ -12,7 +12,7 @@ The CFO has also requested a more detailed analysis on specific card holders nam
 This README presents the observations and conclusion of the review and analysis. 
 
 ### Data and Model
-To study the consumption pattern, we have relied on daily credit card transaction data for the period from 01 Jan 2018 to 31 December 2018. A database model was defined to store the credit card transaction data and a PostgreSQL database was created based on the model. The entity relationship diagram below sets out the defined database model.
+To study the consumption pattern, we have relied on daily credit card transaction data for the period from 01 January 2018 to 31 December 2018. A database model was defined to store the credit card transaction data and a PostgreSQL database was created based on the model. The entity relationship diagram below sets out the defined database model.
 
 ![](./Diagram/ERD_Fraud_Detection.jpg)
 
@@ -21,11 +21,11 @@ Once the database schema is created, data was imported from the corresponding cs
 ### Results and Observations
 #### Part 1. Potential Fraudelent Transactions
 #### Is there a credit card has been hacked?
-Some fraudsters hack a credit card by making several small transactions (generally less than $2.00), which are typically ignored by most cardholders. The chart below shows the total number of transactions that are less than $2.00 per cardholder. <br>
+Some fraudsters hack a credit card by making several small transactions (generally less than $2.00), which are typically ignored by most cardholders. The bar chart below shows the total number of transactions that are less than $2.00 per cardholder. <br>
 
 ![](./Diagram/plot_twoless.jpeg)
 
- Small transactions could be genuine. It is unreasonable to expect no small transactions at all. To narrow down the list of potential fraudulent transactions, we analyse the daily maximum transaction amount of each cardholders in order to establish an expected consumption pattern.
+ Small transactions could be genuine. It is unreasonable to expect no small transactions. To increase the accuracy of our detection fraudulent transactions, we analyse the daily maximum transaction amount of each cardholders in order to establish an expected consumption pattern.
 
 ![](./Diagram/plot_maxtxn.jpeg)
 
