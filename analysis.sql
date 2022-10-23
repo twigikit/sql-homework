@@ -50,6 +50,7 @@ SELECT		txn_id,
 			txn_hour,
 			txn_min,
 			amount,
+			cardholder_id,
 			merchant_name,
 			merchant_category
 FROM 	(	
@@ -59,6 +60,7 @@ FROM 	(
 							txn_min,
 							txn_hour,
 							amount,
+							cardholder_id,
 							merchant_name,
 							merchant_category
 				FROM		V_data_joined
@@ -71,6 +73,7 @@ FROM 	(
 							txn_min,
 							txn_hour,
 							amount,
+							cardholder_id,
 							merchant_name,
 							merchant_category
 				FROM		V_data_joined
@@ -82,6 +85,22 @@ FROM 	(
  LIMIT 100
  ;
 
+--additional analysis
+--all transaction between 7am and 9am
+select * 
+from  v_top_100_txn_7to9am
+ORDER BY amount DESC
+;
+
+--transaction by hour
+SELECT 		txn_hour,
+			sum(twoless_ind) small_txn,
+	   		sum(large_ind) fraud_txn_suspect
+FROM		v_data_joined
+GROUP BY	txn_hour
+ORDER BY	txn_hour ASC
+;
+	   
 
 --top 5 merchants prone to being hacked
 CREATE VIEW v_top5_merchant AS
@@ -99,4 +118,5 @@ FROM 	(SELECT  merchant_name,
 ORDER BY small_txn_cnt DESC, large_txn_cnt DESC
 LIMIT 5
 ;
+
 
